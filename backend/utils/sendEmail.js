@@ -1,10 +1,9 @@
 const nodemailer = require("nodemailer");
-require("dotenv").config();
 
 const sendEmail = async (subject, message, send_to, sent_from, reply_to) => {
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT,
+    port: "587",
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -17,12 +16,12 @@ const sendEmail = async (subject, message, send_to, sent_from, reply_to) => {
   const options = {
     from: sent_from,
     to: send_to,
-    replyTO: reply_to,
+    replyTo: reply_to,
     subject: subject,
     html: message,
   };
 
-  // send Email
+  // Send Email
   transporter.sendMail(options, function (err, info) {
     if (err) {
       console.log(err);
@@ -31,4 +30,5 @@ const sendEmail = async (subject, message, send_to, sent_from, reply_to) => {
     }
   });
 };
+
 module.exports = sendEmail;
