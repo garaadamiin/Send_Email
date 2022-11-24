@@ -10,7 +10,12 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 5000;
+// Route
+app.get("/", (req, res) => {
+  res.send("HOME PAGE");
+});
+
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server Running on Port ${PORT}....`);
 });
