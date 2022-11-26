@@ -25,8 +25,8 @@ app.post("/api/sendemail", async (req, res) => {
     const reply_to = email;
     const subject = "Thank You Message From NodeCourse";
     const message = `
-        <h3>Hello Zino</h3>
-        <p>Thank for your YouTube Tutorials</p>
+        <h3>Hello Garaad Amiin</h3>
+        <p>Thanks</p>
         <p>Regards...</p>
     `;
 
