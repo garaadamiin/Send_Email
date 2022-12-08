@@ -28,7 +28,7 @@
 - [dotenv](https://www.npmjs.com/package/dotenv)
   - Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
     -create .env file then
-    EMAIL_HOST=smtp-mail.outlook.com or gmail
+    EMAIL_HOST=smtp-mail.outlook.com
     EMAIL_PORT=587
     EMAIL_USER=
     EMAIL_PASS=
